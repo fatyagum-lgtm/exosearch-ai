@@ -1,5 +1,3 @@
-from pathlib import Path
-
 import pytest
 
 from exosearch_ai.data import load_catalog
