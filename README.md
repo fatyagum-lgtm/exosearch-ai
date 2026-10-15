@@ -146,7 +146,7 @@ See [research methodology](docs/METHODOLOGY.md), [dataset card](docs/DATASET_CAR
 
 ## Original university project and this repository
 
-This repository is a **new independent codebase** inspired by the original CAI 4002 group project *ExoSearch_AI*, documented in a report dated April 25, 2026. The original group comprised Maria Amaya, Fatima Humbatova, Adrian Perez Galindo, and Maksim Pikalov; Fatima identifies herself as the team leader. The source code of that earlier work was unavailable when this version was recreated. Results, commits, screenshots, and experiments from this new repository should **not** be attributed to the original historical implementation or to all original team members.
+This repository is a **new independent codebase** inspired by the original CAI 4002 group project *ExoSearch_AI*, documented in a report dated April 25, 2026. The original group comprised Maria Amaya, Fatima Humbatova, Adrian Perez Galindo, and Maksim Pikalov.
 
 This project is an educational research tool, not an official NASA application or endorsement.
 
