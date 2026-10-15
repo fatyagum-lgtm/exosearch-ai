@@ -175,7 +175,8 @@ def _write_research_summary(out: Path, experiment: dict) -> None:
     for name, records in experiment["models"].items():
         m = records["test"]
         lines.append(f"| {name} | {m['precision']:.3f} | {m['recall']:.3f} | {m['f1']:.3f} | {m['average_precision']:.3f} | {m['roc_auc']:.3f} | {m['brier_score']:.3f} |")
-    a=experiment['feature_ablation']['metrics']; rnd=experiment['random_split_reference']
+    a = experiment["feature_ablation"]["metrics"]
+    rnd = experiment["random_split_reference"]
     lines += ["", "## Ablation — remove derived radius", "",
               "Re-train Logistic Regression without `pl_rade` on the same star-disjoint training split; holdout classification:",
               f"- Test F1 = {a['f1']:.3f}; average precision = {a['average_precision']:.3f}.",
