@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ExoSearch AI | Research Observatory</title>
+<style>
+:root{--bg:#070d19;--panel:#101a2b;--surface:#121e30;--stroke:#28364d;--faint:#8292ac;--text:#f1f7ff;--aqua:#64e7d6;--blue:#97b1ff;--warn:#f8b47a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body:before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 80% -10%,rgba(72,117,179,.15),transparent 52%),radial-gradient(ellipse at 0% 10%,rgba(36,149,151,.07),transparent 58%);z-index:-1;pointer-events:none}a{color:inherit;text-decoration:none}aside{width:250px;position:fixed;inset:0 auto 0 0;border-right:1px solid var(--stroke);background:rgba(9,16,29,.97);padding:34px 22px;display:flex;flex-direction:column;gap:28px}.brand{display:flex;align-items:center;gap:11px;font-size:17px;letter-spacing:.6px;font-weight:730}.brand-mark{display:grid;place-items:center;width:38px;height:38px;background:rgba(100,231,214,.09);border:1px solid #26746f;border-radius:10px;color:var(--aqua);font-size:24px}.meta{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:1.5px;color:var(--faint);text-transform:uppercase}.nav{display:flex;flex-direction:column;gap:6px}.nav a{padding:12px 13px;color:#a5b7cf;border-radius:9px;font-size:13px;display:flex;gap:13px}.nav a:hover,.nav a:focus{background:#1a2b43;color:var(--aqua)}.nav .num{font:11px ui-monospace,Menlo,monospace;color:var(--aqua)}.bottom{margin-top:auto;padding:15px 12px;background:#111e2e;border:1px solid #233851;border-radius:10px;font-size:12px;color:#9fb0c4;line-height:1.8}.led{display:inline-block;background:#6be3cb;border-radius:50%;width:7px;height:7px;margin-right:8px}main{margin-left:250px;max-width:1700px;padding:37px clamp(26px,4vw,75px) 100px}.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:29px}.topbar .path{font:12px ui-monospace,Menlo,monospace;color:#97a8bc}.topbar .path span{color:#65dfd2}.status{font:11px ui-monospace,Menlo,monospace;color:var(--aqua);padding:8px 12px;border-radius:20px;background:#122a32;border:1px solid #215454}.hero{border:1px solid #284054;border-radius:18px;padding:44px 49px 40px;background:linear-gradient(116deg,#13243a 5%,#0e1d30 58%,#102a38);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-60px;top:-120px;width:430px;height:430px;border:1px solid #235365;border-radius:50%;box-shadow:0 0 0 38px rgba(61,168,186,.032),0 0 0 79px rgba(61,168,186,.028),0 0 0 123px rgba(61,168,186,.02);pointer-events:none}.eyebrow{color:var(--aqua);font:12px ui-monospace,Menlo,monospace;letter-spacing:1.8px;text-transform:uppercase}h1{font-size:clamp(38px,4.2vw,65px);letter-spacing:-2px;margin:13px 0 10px;font-weight:760}h1 em{font-style:normal;color:var(--aqua)}.hero p{max-width:680px;color:#b0c0d2;font-size:15px;line-height:1.8}.chiprow{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.chip{border:1px solid #3e5369;background:#1b3445;border-radius:5px;color:#baddde;font-size:11px;font-family:ui-monospace,monospace;padding:8px 11px}.warning{margin-top:18px;padding:14px 17px;border:1px solid #835a3d;background:#2a211f;border-radius:9px;color:#f5c5a7;font-size:13px;line-height:1.6}.section{margin-top:49px;scroll-margin-top:32px}.head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.head h2{font-size:23px;letter-spacing:-.5px;margin:0}.head h2 .n{color:var(--aqua);font:15px ui-monospace,monospace;margin-right:10px}.subtitle{font-size:12px;color:var(--faint)}.kpis{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:14px}.card,.plot,.tablecard{background:linear-gradient(125deg,rgba(18,30,48,.98),rgba(12,23,37,.98));border:1px solid var(--stroke);border-radius:13px}.card{padding:19px 21px;min-height:130px}.card label{display:block;font-size:12px;color:#92a9bf;margin-bottom:18px}.card strong{display:block;font-size:29px;font-weight:740;letter-spacing:-.7px}.card small{display:block;margin-top:6px;font-size:11px;color:#8395ae}.grids{display:grid;grid-template-columns:1fr 1fr;gap:15px}.plot{padding:19px}.plot h3{font-size:14px;font-weight:600;letter-spacing:.1px;margin:0 0 4px}.plot p{color:var(--faint);font-size:12px;margin:4px 0 0;line-height:1.6}.wide{grid-column:span 2}.tablecard{overflow:hidden}input{border:1px solid #2b445e;background:#0e1c2e;color:var(--text);padding:11px 14px;border-radius:8px;font-size:13px;outline:none;max-width:320px;width:100%}input:focus{border-color:var(--aqua)}table{width:100%;border-collapse:collapse;font-size:12px}td,th{padding:13px 17px;border-bottom:1px solid #253449;text-align:left}th{color:#8ca6bd;font-weight:600;letter-spacing:.5px;text-transform:uppercase;font-size:10px}tbody tr:hover{background:#1a2c41}td.mono{font:12px ui-monospace,Menlo,monospace}td.strong{font-weight:700;color:#7ce9d4}.tablewrap{overflow:auto;max-height:480px}.note{line-height:1.8;color:#a6b7ce;font-size:13px}.note strong{color:#f3fbff}.foot{font:11px ui-monospace,Menlo,monospace;color:#68849b;margin-top:50px;border-top:1px solid var(--stroke);padding-top:21px}.badge{display:inline-block;color:var(--aqua);font-size:11px;padding:5px 9px;background:#19343d;border:1px solid #2a5c5a;border-radius:8px}@media(max-width:1050px){aside{position:static;width:auto;padding:17px 22px;gap:10px}.nav{flex-direction:row;flex-wrap:wrap}.nav a{padding:7px}.bottom{display:none}main{margin:0;padding:25px 20px}.kpis{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.hero{padding:30px 23px}.kpis{grid-template-columns:1fr 1fr}.grids{grid-template-columns:1fr}.wide{grid-column:auto}.topbar{gap:10px;flex-wrap:wrap}.head{flex-wrap:wrap;gap:10px}}
+</style>
+<script src="plotly.min.js"></script>
+</head>
+<body>
+<aside>
+  <div class="brand"><span class="brand-mark">✳</span><span>EXOSEARCH<span style="color:#61e3d0">_AI</span></span></div>
+  <div class="meta">Research Observatory / 2026</div>
+  <nav class="nav">
+   <a href="#overview"><span class="num">01</span> Overview</a>
+   <a href="#evaluation"><span class="num">02</span> Model evaluation</a>
+   <a href="#candidates"><span class="num">03</span> Candidate ranking</a>
+   <a href="#interpretation"><span class="num">04</span> Methodology</a>
+  </nav>
+  <div class="bottom"><span class="led"></span>OFFLINE RESEARCH REPORT<br>Python · Logistic Regression · XGBoost<br>TESS TOI catalog-vetting study</div>
+</aside>
+<main>
+  <div class="topbar"><div class="path">EXOSEARCH / <span>RESEARCH LAB</span> / VERSION 0.1</div><div class="status">● ANALYSIS COMPLETE</div></div>
+  <section class="hero" id="overview">
+   <div class="eyebrow">Machine learning · Exoplanet science</div>
+   <h1>Signals into <em>insight.</em></h1>
+   <p>A transparent experiment classifying TESS Objects of Interest using published catalog measurements, then prioritizing unresolved candidates for expert review. This is <strong>not</strong> a discovery claim or raw light-curve detection system.</p>
+   <div class="chiprow"><span class="chip">NASA TOI SCHEMA</span><span class="chip">TIC-DISJOINT TESTING</span><span class="chip">2 MODEL FAMILIES</span><span class="chip">OFFLINE REPORT</span></div>
+  </section>
+  {% if demo %}<div class="warning"><strong>SYNTHETIC DEMONSTRATION — NOT SCIENTIFIC VALIDATION.</strong> The displayed dataset was generated locally to exercise the software; no results here measure real NASA TESS prediction accuracy. Use <code>exosearch fetch</code> and <code>exosearch train</code> to conduct an actual NASA-catalog experiment.</div>{% endif %}
+  <section class="section">
+   <div class="head"><h2><span class="n">01 /</span> Experiment overview</h2><span class="subtitle">Dataset: {{ exp.data_type }}</span></div>
+   <div class="kpis">
+    <div class="card"><label>Catalog records</label><strong>{{ '{:,}'.format(exp.schema_summary.rows) }}</strong><small>Input objects</small></div>
+    <div class="card"><label>Evaluated labels</label><strong>{{ '{:,}'.format(exp.labeled_rows) }}</strong><small>CP / KP vs FP / FA</small></div>
+    <div class="card"><label>Unresolved candidates</label><strong>{{ '{:,}'.format(exp.unlabeled_candidates) }}</strong><small>PC / APC (rank only)</small></div>
+    <div class="card"><label>Selected model</label><strong style="font-size:18px;color:var(--aqua);margin-top:8px">{{ exp.winner | replace('_', ' ') | title }}</strong><small>Selected on validation average precision</small></div>
+   </div>
+  </section>
+  <section class="section" id="evaluation">
+   <div class="head"><h2><span class="n">02 /</span> Evaluation laboratory</h2><span class="subtitle">Held-out, star-disjoint test set</span></div>
+   <div class="grids">
+     <div class="plot"><h3>Model benchmark</h3><p>Unseen TIC host-star groups · held-out classification metrics</p>{{ charts.comparison | safe }}</div>
+     <div class="plot"><h3>Precision / Recall</h3><p>Ranking performance across classification thresholds</p>{{ charts.pr | safe }}</div>
+     <div class="plot"><h3>Confusion matrix</h3><p>Winning classifier · threshold = 0.5 (not tuned on test)</p>{{ charts.confusion | safe }}</div>
+     <div class="plot"><h3>Feature signal strength</h3><p>Model-specific feature importance; not causal explanation</p>{{ charts.importance | safe }}</div>
+   </div>
+  </section>
+  <section class="section" id="candidates">
+    <div class="head"><h2><span class="n">03 /</span> Candidate prioritization</h2><span class="subtitle">{{ total_ranked }} unresolved objects</span></div>
+    <div class="plot"> <h3>Candidate parameter space</h3><p>Color shows model similarity to known/confirmed catalog dispositions, NOT proof of a planet.</p>{{ charts.scatter | safe }}</div>
+    <div class="head" style="margin-top:23px"><h2 style="font-size:17px">Priority queue</h2><input id="search" type="search" placeholder="Filter by TOI or TIC ID..." aria-label="Search candidate table" /></div>
+    <div class="tablecard"><div class="tablewrap"><table id="ranking"><thead><tr><th>Rank</th><th>TOI</th><th>TIC ID</th><th>Disposition</th><th>Model score</th><th>Period (d)</th><th>Radius (R⊕)</th></tr></thead><tbody>
+      {% for row in rows %}<tr><td>{{ loop.index }}</td><td class="mono">{{ row.toi }}</td><td class="mono">{{ row.tid }}</td><td><span class="badge">{{ row.disposition }}</span></td><td class="strong">{{ row.score }}</td><td>{{ row.period }}</td><td>{{ row.radius }}</td></tr>{% endfor %}
+    </tbody></table></div></div>
+    <p class="note">First 250 rows displayed; full ranking is available as <code>candidate_ranking.csv</code>. Scores are relative sorting signals, not validated discovery probabilities.</p>
+  </section>
+  <section class="section" id="interpretation">
+   <div class="head"><h2><span class="n">04 /</span> Scientific methodology</h2></div>
+   <div class="grids">
+    <div class="plot"><h3>Experiment design</h3><p class="note">Training set: <strong>{{ exp.split_counts.train.rows }}</strong> rows from {{ exp.split_counts.train.stars }} stars.<br>Validation: <strong>{{ exp.split_counts.validation.rows }}</strong> rows.<br>Test: <strong>{{ exp.split_counts.test.rows }}</strong> rows.<br>Model selected on validation <strong>average precision</strong>. Holdout labels were not used for training or tuning. Seed: {{ exp.seed }}.</p></div>
+    <div class="plot"><h3>Threats to validity</h3><p class="note">Disposition outcomes may reflect follow-up selection bias. Catalog parameters can change after confirmation. The TFOPWG label is an observational status, not a direct measurement of physical ground truth. Candidate PC/APC samples remain <strong>unlabeled</strong> in training.</p></div>
+    <div class="plot wide"><h3>Interpretation boundary</h3><p class="note">Model output measures pattern similarity within this training setup. It does not independently discover planets, confirm astrophysical phenomena, or replace expert follow-up observations. For genuine publication, freeze a dated NASA snapshot and independently reproduce the experiment on it. Historic performance can be optimistic if parameter values reflect later follow-up measurements.</p></div>
+   </div>
+  </section>
+  <div class="foot">EXOSEARCH_AI · SCIENTIFIC ML PORTFOLIO · GENERATED FROM ACTUAL EXECUTED PIPELINE · {{ exp.created_utc }} · BUILT FOR OFFLINE INSPECTION</div>
+</main>
+<script>
+const search = document.getElementById('search');
+search.addEventListener('input', () => {const query = search.value.trim().toLowerCase(); for (const row of document.querySelectorAll('#ranking tbody tr')) { const cols=row.querySelectorAll('td'); row.style.display=(cols[1].textContent+' '+cols[2].textContent).toLowerCase().includes(query)?'':'none'; }});
+</script>
+</body></html>
